@@ -34,84 +34,80 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView {
-                VStack(spacing: 24) {
+        ScrollView {
+            VStack(spacing: 24) {
+                HStack {
+                    // TODO: Implement time-based greeting message
+                    Text("Good morning, Faith")
+                        .frame(maxWidth: 215, alignment: .leading)
+                        .font(Font.custom("Poppins-SemiBold", size: 26))
+                        .padding(EdgeInsets(top: 28, leading: 0, bottom: 0, trailing: 0))
+                    Spacer()
+                    // TODO: Add notifications button to the right of greeting Text
+                    Image(systemName: "bell.fill")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .padding(EdgeInsets(top: 28, leading: 0, bottom: 0, trailing: 0))
+                        .foregroundColor(.primaryColor)
+                }
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                
+                TextField("\(Image(systemName: "magnifyingglass")) Espresso, light roast, floral", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    .font(Font.custom("Poppins-Regular", size: 14))
+                    .padding(EdgeInsets(top: 8, leading: 10, bottom: 8, trailing: 10))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.secondaryColor, lineWidth: 1)
+                    )
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                
+                VStack {
                     HStack {
-                        // TODO: Implement time-based greeting message
-                        Text("Good morning, Faith")
-                            .frame(maxWidth: 215, alignment: .leading)
-                            .font(Font.custom("Poppins-SemiBold", size: 26))
-                            .padding(EdgeInsets(top: 28, leading: 0, bottom: 0, trailing: 0))
-//                        Spacer(minLength: geometry.size.width * 0.3)
+                        Text("Categories")
+                            .font(Font.custom("Poppins-SemiBold", size: 20))
                         Spacer()
-                        // TODO: Add notifications button to the right of greeting Text
-                        Image(systemName: "bell.fill")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .padding(EdgeInsets(top: 28, leading: 0, bottom: 0, trailing: 0))
-                            .foregroundColor(.primaryColor)
+                        Text("See all")
                     }
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     
-                    TextField("\(Image(systemName: "magnifyingglass")) Espresso, light roast, floral", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                        .font(Font.custom("Poppins-Regular", size: 14))
-                        .padding(EdgeInsets(top: 8, leading: 10, bottom: 8, trailing: 10))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.secondaryColor, lineWidth: 1)
-                        )
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                    
-                    VStack {
-                        HStack {
-                            Text("Categories")
-                                .font(Font.custom("Poppins-SemiBold", size: 20))
-                            Spacer()
-                            Text("See all")
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                        
-                        ScrollView(.horizontal) {
-                            HStack(spacing: 10) {
-                                ForEach(0..<5) {
-                                    Button("Item \($0)") {
-                                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                                    }
-                                    .foregroundColor(.white)
-                                    .frame(width: 125, height: 56)
-                                    .background(Color.red)
-                                    .cornerRadius(8)
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 10) {
+                            ForEach(0..<5) {
+                                Button("Item \($0)") {
+                                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                                 }
+                                .foregroundColor(.white)
+                                .frame(width: 125, height: 56)
+                                .background(Color.red)
+                                .cornerRadius(8)
                             }
-                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                        }
-                    }
-                    
-                    Button("BANNER") {
-                    }
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, minHeight: 142)
-                    .background(Color.red)
-                    .cornerRadius(8)
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                    
-                    VStack {
-                        HStack {
-                            Text("Popular")
-                                .font(Font.custom("Poppins-SemiBold", size: 20))
-                            Spacer()
-                            Text("See all")
                         }
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                        
-                        WaterfallGrid(coffeeItems) { coffeeItem in
-                            CoffeeItemView(coffeeItem: coffeeItem)
-                        }
+                    }
+                }
+                
+                Button("BANNER") {
+                }
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity, minHeight: 142)
+                .background(Color.red)
+                .cornerRadius(8)
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                
+                VStack {
+                    HStack {
+                        Text("Popular")
+                            .font(Font.custom("Poppins-SemiBold", size: 20))
+                        Spacer()
+                        Text("See all")
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                    
+                    WaterfallGrid(coffeeItems) { coffeeItem in
+                        CoffeeItemView(coffeeItem: coffeeItem)
                     }
                 }
             }
-//        .background(Color.backgroundColor)
         }
     }
 }
