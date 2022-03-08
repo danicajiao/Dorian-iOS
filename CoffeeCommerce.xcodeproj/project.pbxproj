@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D011D2E927D7123200E280CE /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2E827D7123200E280CE /* HeartButton.swift */; };
 		D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */; };
 		D02B2FB827BD7E61004732CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB727BD7E61004732CB /* ContentView.swift */; };
 		D02B2FBA27BD7E62004732CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FB927BD7E62004732CB /* Assets.xcassets */; };
 		D02B2FBD27BD7E62004732CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FBC27BD7E62004732CB /* Preview Assets.xcassets */; };
+		D02B2FC727BD7F64004732CB /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FC527BD7F64004732CB /* Poppins-Regular.ttf */; };
+		D02B2FC827BD7F64004732CB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FC627BD7F64004732CB /* Poppins-SemiBold.ttf */; };
+		D0D3C27527D5531D00BD4E39 /* CoffeeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */; };
+		D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */; };
+		D0E1D97D27D1C10000A11569 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = D0E1D97C27D1C10000A11569 /* WaterfallGrid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D011D2E827D7123200E280CE /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCommerceApp.swift; sourceTree = "<group>"; };
 		D02B2FB727BD7E61004732CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D02B2FB927BD7E62004732CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02B2FBC27BD7E62004732CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D02B2FC527BD7F64004732CB /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		D02B2FC627BD7F64004732CB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../Downloads/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		D02B2FC927BD7FC3004732CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItemView.swift; sourceTree = "<group>"; };
+		D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +38,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E1D97D27D1C10000A11569 /* WaterfallGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0203EC127C1DB6F0047064C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		D02B2FA927BD7E61004732CB = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +71,13 @@
 		D02B2FB427BD7E61004732CB /* CoffeeCommerce */ = {
 			isa = PBXGroup;
 			children = (
-				D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */,
-				D02B2FB727BD7E61004732CB /* ContentView.swift */,
-				D02B2FB927BD7E62004732CB /* Assets.xcassets */,
+				D02B2FCA27BDB1AF004732CB /* Components */,
+				D02B2FCC27BDB1C8004732CB /* Scenes */,
+				D02B2FCD27BDB1D0004732CB /* Supporting Files */,
+				D02B2FC327BD7ED4004732CB /* Resources */,
+				D02B2FCB27BDB1C3004732CB /* Models */,
+				D02B2FCE27BDB1DB004732CB /* Vendors */,
+				D02B2FCF27BDB1E3004732CB /* Workers */,
 				D02B2FBB27BD7E62004732CB /* Preview Content */,
 			);
 			path = CoffeeCommerce;
@@ -65,6 +89,73 @@
 				D02B2FBC27BD7E62004732CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D02B2FC327BD7ED4004732CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0203EC127C1DB6F0047064C /* Images */,
+				D02B2FB927BD7E62004732CB /* Assets.xcassets */,
+				D02B2FC427BD7EEC004732CB /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D02B2FC427BD7EEC004732CB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D02B2FC527BD7F64004732CB /* Poppins-Regular.ttf */,
+				D02B2FC627BD7F64004732CB /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D02B2FCA27BDB1AF004732CB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */,
+				D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */,
+				D011D2E827D7123200E280CE /* HeartButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D02B2FCB27BDB1C3004732CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D02B2FCC27BDB1C8004732CB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D02B2FB727BD7E61004732CB /* ContentView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D02B2FCD27BDB1D0004732CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */,
+				D02B2FC927BD7FC3004732CB /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D02B2FCE27BDB1DB004732CB /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		D02B2FCF27BDB1E3004732CB /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +174,9 @@
 			dependencies = (
 			);
 			name = CoffeeCommerce;
+			packageProductDependencies = (
+				D0E1D97C27D1C10000A11569 /* WaterfallGrid */,
+			);
 			productName = CoffeeCommerce;
 			productReference = D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +205,9 @@
 				Base,
 			);
 			mainGroup = D02B2FA927BD7E61004732CB;
+			packageReferences = (
+				D0E1D97B27D1C10000A11569 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
+			);
 			productRefGroup = D02B2FB327BD7E61004732CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +222,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02B2FC727BD7F64004732CB /* Poppins-Regular.ttf in Resources */,
+				D02B2FC827BD7F64004732CB /* Poppins-SemiBold.ttf in Resources */,
 				D02B2FBD27BD7E62004732CB /* Preview Assets.xcassets in Resources */,
 				D02B2FBA27BD7E62004732CB /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D011D2E927D7123200E280CE /* HeartButton.swift in Sources */,
 				D02B2FB827BD7E61004732CB /* ContentView.swift in Sources */,
+				D0D3C27527D5531D00BD4E39 /* CoffeeItemView.swift in Sources */,
+				D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */,
 				D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +374,7 @@
 				DEVELOPMENT_TEAM = 7V49PRU8U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CoffeeCommerce/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +404,7 @@
 				DEVELOPMENT_TEAM = 7V49PRU8U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CoffeeCommerce/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0E1D97B27D1C10000A11569 /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0E1D97C27D1C10000A11569 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0E1D97B27D1C10000A11569 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
+			productName = WaterfallGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D02B2FAA27BD7E61004732CB /* Project object */;
 }
