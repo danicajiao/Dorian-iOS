@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CoffeeItemView: View {
-    let coffeeItem: CoffeeItem
+    var coffeeItem: CoffeeItem
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -21,11 +21,11 @@ struct CoffeeItemView: View {
             
             VStack {
                 ZStack {
-                    Image(coffeeItem.imgPath)
+                    Image(coffeeItem.imgName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                    Button("") {}
-                    .buttonStyle(HeartButton())
+                    LikeButton()
+//                    .buttonStyle(HeartButton())
                     .offset(x: 60, y: -60)
                     .shadow(color: .dropShadowColor, radius: 20)
                 }
@@ -50,7 +50,7 @@ struct CoffeeItemView: View {
 
 struct CoffeeItemView_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeItemView(coffeeItem: CoffeeItem(brand: "Wonderstate Coffee", name: "Star Valley Decaf", price: 23.0, imgPath: "WST-1011_2"))
+        CoffeeItemView(coffeeItem: CoffeeItem(brand: "Wonderstate Coffee", name: "Star Valley Decaf", price: 23.0, imgName: "WST-1011_2"))
             .previewLayout(.sizeThatFits)
     }
 }

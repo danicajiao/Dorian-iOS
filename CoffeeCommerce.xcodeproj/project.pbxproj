@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D011D2E927D7123200E280CE /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2E827D7123200E280CE /* HeartButton.swift */; };
+		D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2EA27D735FA00E280CE /* CoffeeItem.swift */; };
 		D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */; };
 		D02B2FB827BD7E61004732CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB727BD7E61004732CB /* ContentView.swift */; };
 		D02B2FBA27BD7E62004732CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FB927BD7E62004732CB /* Assets.xcassets */; };
 		D02B2FBD27BD7E62004732CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FBC27BD7E62004732CB /* Preview Assets.xcassets */; };
 		D02B2FC727BD7F64004732CB /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FC527BD7F64004732CB /* Poppins-Regular.ttf */; };
 		D02B2FC827BD7F64004732CB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FC627BD7F64004732CB /* Poppins-SemiBold.ttf */; };
+		D069A31327D9126400C5FFCF /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069A31227D9126400C5FFCF /* LikeButton.swift */; };
 		D0D3C27527D5531D00BD4E39 /* CoffeeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */; };
 		D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */; };
 		D0E1D97D27D1C10000A11569 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = D0E1D97C27D1C10000A11569 /* WaterfallGrid */; };
@@ -21,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		D011D2E827D7123200E280CE /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		D011D2EA27D735FA00E280CE /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCommerceApp.swift; sourceTree = "<group>"; };
 		D02B2FB727BD7E61004732CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		D02B2FC527BD7F64004732CB /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D02B2FC627BD7F64004732CB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../Downloads/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D02B2FC927BD7FC3004732CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D069A31227D9126400C5FFCF /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItemView.swift; sourceTree = "<group>"; };
 		D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +120,7 @@
 				D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */,
 				D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */,
 				D011D2E827D7123200E280CE /* HeartButton.swift */,
+				D069A31227D9126400C5FFCF /* LikeButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		D02B2FCB27BDB1C3004732CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D011D2EA27D735FA00E280CE /* CoffeeItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,7 +246,9 @@
 				D02B2FB827BD7E61004732CB /* ContentView.swift in Sources */,
 				D0D3C27527D5531D00BD4E39 /* CoffeeItemView.swift in Sources */,
 				D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */,
+				D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */,
 				D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */,
+				D069A31327D9126400C5FFCF /* LikeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

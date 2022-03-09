@@ -16,26 +16,18 @@ extension Color {
     static let dropShadowColor = Color("DropShadowColor")
 }
 
-struct CoffeeItem: Identifiable {
-    let id = UUID()
-    let brand: String
-    let name: String
-    let price: Float
-    let imgPath: String
-}
-
 struct ContentView: View {
     
     let coffeeItems = [
-        CoffeeItem(brand: "Wonderstate Coffee", name: "Star Valley Decaf", price: 23.0, imgPath: "WST-1011_2"),
-        CoffeeItem(brand: "Brandywine Coffee", name: "Ethiopia Chelbasa Natural", price: 23.0, imgPath: "BDWN-1108"),
-        CoffeeItem(brand: "Ritual Coffee", name: "Producer's Pride", price: 23.0, imgPath: "RTL-1015_2"),
-        CoffeeItem(brand: "Methodical Coffee", name: "Ethiopia Dur Feres", price: 23.0, imgPath: "dur-feres-golden-mug_copy")
+        CoffeeItem(brand: "Wonderstate Coffee", name: "Star Valley Decaf", price: 23.0, imgName: "WST-1011_2"),
+        CoffeeItem(brand: "Brandywine Coffee", name: "Ethiopia Chelbasa Natural", price: 23.0, imgName: "BDWN-1108"),
+        CoffeeItem(brand: "Ritual Coffee", name: "Producer's Pride", price: 23.0, imgName: "RTL-1015_2"),
+        CoffeeItem(brand: "Methodical Coffee", name: "Ethiopia Dur Feres", price: 23.0, imgName: "dur-feres-golden-mug_copy")
     ]
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 24) {
+            VStack(spacing: 26) {
                 HStack {
                     // TODO: Implement time-based greeting message
                     Text("Good morning, Faith")
