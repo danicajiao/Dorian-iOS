@@ -14,6 +14,11 @@ extension Color {
     static let secondaryColor = Color("SecondaryColor")
     static let tertiaryColor = Color("TertiaryColor")
     static let dropShadowColor = Color("DropShadowColor")
+    static let fruityGradient = Color("FruityGradient")
+    static let chocoGradient = Color("ChocoGradient")
+    static let citrusGradient = Color("CitrusGradient")
+    static let earthyGradient = Color("EarthyGradient")
+    static let floralGradient = Color("FloralGradient")
 }
 
 struct ContentView: View {
@@ -24,6 +29,8 @@ struct ContentView: View {
         CoffeeItem(brand: "Ritual Coffee", name: "Producer's Pride", price: 23.0, imgName: "RTL-1015_2"),
         CoffeeItem(brand: "Methodical Coffee", name: "Ethiopia Dur Feres", price: 23.0, imgName: "dur-feres-golden-mug_copy")
     ]
+    
+    let categories = ["Fruity", "Choco", "Citrus", "Earthy", "Floral"]
     
     var body: some View {
         ScrollView {
@@ -58,20 +65,17 @@ struct ContentView: View {
                         Text("Categories")
                             .font(Font.custom("Poppins-SemiBold", size: 20))
                         Spacer()
-                        Text("See all")
+                        // TODO: Navigate to Categories scene
+                        Button("See all \(Image(systemName: "arrow.forward"))") {
+                        }
+                        .foregroundColor(.primaryColor)
                     }
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     
                     ScrollView(.horizontal) {
                         HStack(spacing: 10) {
-                            ForEach(0..<5) {
-                                Button("Item \($0)") {
-                                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                                }
-                                .foregroundColor(.white)
-                                .frame(width: 125, height: 56)
-                                .background(Color.red)
-                                .cornerRadius(8)
+                            ForEach(categories, id: \.self) { category in
+                                CategoryButton(category: category)
                             }
                         }
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
@@ -91,7 +95,10 @@ struct ContentView: View {
                         Text("Popular")
                             .font(Font.custom("Poppins-SemiBold", size: 20))
                         Spacer()
-                        Text("See all")
+                        // TODO: Navigate to Browse scene
+                        Button("See all \(Image(systemName: "arrow.forward"))") {
+                        }
+                        .foregroundColor(.primaryColor)
                     }
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     
