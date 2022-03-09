@@ -82,13 +82,8 @@ struct ContentView: View {
                     }
                 }
                 
-                Button("BANNER") {
-                }
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, minHeight: 142)
-                .background(Color.red)
-                .cornerRadius(8)
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                BannerButton()
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 
                 VStack {
                     HStack {
