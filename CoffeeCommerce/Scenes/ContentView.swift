@@ -33,7 +33,7 @@ struct ContentView: View {
     let categories = ["Fruity", "Choco", "Citrus", "Earthy", "Floral"]
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 26) {
                 HStack {
                     // TODO: Implement time-based greeting message
@@ -72,7 +72,7 @@ struct ContentView: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                     
-                    ScrollView(.horizontal) {
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
                             ForEach(categories, id: \.self) { category in
                                 CategoryButton(category: category)
