@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CoffeeItemView: View {
-    var coffeeItem: CoffeeItem
+    @ObservedObject var coffeeItem: CoffeeItem
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -24,10 +24,9 @@ struct CoffeeItemView: View {
                     Image(coffeeItem.imgName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                    LikeButton()
-//                    .buttonStyle(HeartButton())
-                    .offset(x: 60, y: -60)
-                    .shadow(color: .dropShadowColor, radius: 20)
+                    LikeButton(enabled: $coffeeItem.favorited)
+                        .offset(x: 60, y: -60)
+                        .shadow(color: .dropShadowColor, radius: 20)
                 }
                 
                 VStack {

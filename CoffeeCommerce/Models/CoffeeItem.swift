@@ -24,4 +24,8 @@ class CoffeeItem: Identifiable, ObservableObject {
         self.imgName = imgName
     }
     
+    func printItem() {
+        print(self.name + " " + self.favorited.description)
+    }
+    
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LikeButton : View {
-    @State var isPressed = false
+    @Binding var enabled: Bool
     
     func simpleSuccess() {
         let generator = UINotificationFeedbackGenerator()
@@ -16,25 +16,24 @@ struct LikeButton : View {
     }
     
     var body: some View {
-        
         ZStack {
             Circle()
                 .frame(width: 35, height: 35)
                 .foregroundColor(.white)
-            Image(systemName: isPressed ? "heart.fill" : "heart")
-                .foregroundColor(isPressed ? .pink : .black)
+            Image(systemName: enabled ? "heart.fill" : "heart")
+                .foregroundColor(enabled ? .pink : .black)
         }
         .onTapGesture {
-            self.isPressed.toggle()
+            self.enabled.toggle()
             simpleSuccess()
         }
     }
 }
 
-struct LikeButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LikeButton()
-            .previewLayout(.sizeThatFits)
-            .background(.gray)
-    }
-}
+//struct LikeButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LikeButton()
+//            .previewLayout(.sizeThatFits)
+//            .background(.gray)
+//    }
+//}
