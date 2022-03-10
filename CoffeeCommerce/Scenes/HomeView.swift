@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  CoffeeCommerce
 //
 //  Created by Daniel Cajiao on 2/16/22.
@@ -22,7 +22,7 @@ extension Color {
     static let floralGradient = Color("FloralGradient")
 }
 
-struct ContentView: View {
+struct HomeView: View {
     
     let coffeeItems = [
         CoffeeItem(brand: "Wonderstate Coffee", name: "Star Valley Decaf", price: 23.0, imgName: "WST-1011_2"),
@@ -109,6 +109,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
