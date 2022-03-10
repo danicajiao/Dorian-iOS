@@ -16,10 +16,12 @@ struct BannerButton: View {
                 .aspectRatio(contentMode: .fit)
                 .scaleEffect(1.4)
             ZStack {
+                
                 Rectangle()
                     .foregroundColor(.clear)
                     .background(.ultraThinMaterial)
                     .cornerRadius(8)
+
                 VStack {
                     Text("Select craft roasters")
                         .font(Font.custom("Poppins-Regular", size: 14))
@@ -36,10 +38,11 @@ struct BannerButton: View {
                         .font(Font.custom("Poppins-Regular", size: 12))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(10)
+                .foregroundColor(.quaternaryColor)
+                .padding(14)
             }
             .frame(width: 140, height: 140)
-            .offset(x: -106, y: 0)
+            .offset(x: -92, y: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: 160)
         .cornerRadius(8)

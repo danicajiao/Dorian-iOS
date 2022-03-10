@@ -13,6 +13,7 @@ extension Color {
     static let primaryColor = Color("PrimaryColor")
     static let secondaryColor = Color("SecondaryColor")
     static let tertiaryColor = Color("TertiaryColor")
+    static let quaternaryColor = Color("QuaternaryColor")
     static let dropShadowColor = Color("DropShadowColor")
     static let fruityGradient = Color("FruityGradient")
     static let chocoGradient = Color("ChocoGradient")
