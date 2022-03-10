@@ -30,10 +30,23 @@ struct LikeButton : View {
     }
 }
 
-//struct LikeButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LikeButton()
-//            .previewLayout(.sizeThatFits)
-//            .background(.gray)
-//    }
-//}
+struct StatefulPreviewWrapper<Value, Content: View>: View {
+    @State var value: Value
+    var content: (Binding<Value>) -> Content
+
+    var body: some View {
+        content($value)
+    }
+
+    init(_ value: Value, content: @escaping (Binding<Value>) -> Content) {
+        self._value = State(wrappedValue: value)
+        self.content = content
+    }
+}
+
+struct LikeButton_Previews: PreviewProvider {
+    static var previews: some View {
+        StatefulPreviewWrapper(false) { LikeButton(enabled: $0) }
+        .previewLayout(.sizeThatFits)
+    }
+}

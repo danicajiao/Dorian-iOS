@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D011D2E927D7123200E280CE /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2E827D7123200E280CE /* HeartButton.swift */; };
 		D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2EA27D735FA00E280CE /* CoffeeItem.swift */; };
 		D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */; };
 		D02B2FB827BD7E61004732CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB727BD7E61004732CB /* ContentView.swift */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D011D2E827D7123200E280CE /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		D011D2EA27D735FA00E280CE /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCommerceApp.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 			children = (
 				D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */,
 				D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */,
-				D011D2E827D7123200E280CE /* HeartButton.swift */,
 				D069A31227D9126400C5FFCF /* LikeButton.swift */,
 				D069A31427D9391C00C5FFCF /* CategoryButton.swift */,
 				D069A31627D95E2700C5FFCF /* BannerButton.swift */,
@@ -248,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D011D2E927D7123200E280CE /* HeartButton.swift in Sources */,
 				D069A31527D9391C00C5FFCF /* CategoryButton.swift in Sources */,
 				D069A31727D95E2700C5FFCF /* BannerButton.swift in Sources */,
 				D02B2FB827BD7E61004732CB /* ContentView.swift in Sources */,
