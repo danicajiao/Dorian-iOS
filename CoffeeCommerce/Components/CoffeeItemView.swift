@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CoffeeItemView: View {
-    @ObservedObject var coffeeItem: CoffeeItem
+    @StateObject var coffeeItem: CoffeeItem
     
     var body: some View {
         ZStack(alignment: .bottom) {
