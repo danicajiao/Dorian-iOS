@@ -20,6 +20,7 @@ extension Color {
     static let citrusGradient = Color("CitrusGradient")
     static let earthyGradient = Color("EarthyGradient")
     static let floralGradient = Color("FloralGradient")
+    static let bannerGradient = Color("BannerGradient")
 }
 
 struct HomeView: View {
@@ -83,7 +84,7 @@ struct HomeView: View {
                     }
                 }
                 
-                BannerButton()
+                BannerButton(bannerType: 1)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 
                 VStack {
@@ -102,6 +103,9 @@ struct HomeView: View {
                         CoffeeItemView(coffeeItem: coffeeItem)
                     }
                 }
+                
+                BannerButton(bannerType: 2)
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
             }
         }
     }
