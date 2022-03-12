@@ -97,12 +97,19 @@ struct HomeView: View {
                         }
                         .foregroundColor(.primaryColor)
                     }
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                    
                     
                     WaterfallGrid(coffeeItems) { coffeeItem in
                         CoffeeItemView(coffeeItem: coffeeItem)
                     }
+                    .gridStyle(
+                        columnsInPortrait: 2,
+                        columnsInLandscape: 3,
+                        spacing: 8,
+                        animation: nil
+                    )
                 }
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 
                 BannerButton(bannerType: 2)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
