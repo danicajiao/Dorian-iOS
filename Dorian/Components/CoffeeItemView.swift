@@ -1,6 +1,6 @@
 //
 //  CoffeeItemView.swift
-//  CoffeeCommerce
+//  Dorian
 //
 //  Created by Daniel Cajiao on 3/6/22.
 //

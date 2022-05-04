@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2EA27D735FA00E280CE /* CoffeeItem.swift */; };
 		D0265B3327DC1ECD004E23F9 /* OriginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0265B3227DC1ECD004E23F9 /* OriginButton.swift */; };
-		D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */; };
+		D02B2FB627BD7E61004732CB /* DorianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB527BD7E61004732CB /* DorianApp.swift */; };
 		D02B2FB827BD7E61004732CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB727BD7E61004732CB /* HomeView.swift */; };
 		D02B2FBA27BD7E62004732CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FB927BD7E62004732CB /* Assets.xcassets */; };
 		D02B2FBD27BD7E62004732CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FBC27BD7E62004732CB /* Preview Assets.xcassets */; };
@@ -27,8 +27,8 @@
 /* Begin PBXFileReference section */
 		D011D2EA27D735FA00E280CE /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
 		D0265B3227DC1ECD004E23F9 /* OriginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginButton.swift; sourceTree = "<group>"; };
-		D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCommerceApp.swift; sourceTree = "<group>"; };
+		D02B2FB227BD7E61004732CB /* Dorian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dorian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02B2FB527BD7E61004732CB /* DorianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorianApp.swift; sourceTree = "<group>"; };
 		D02B2FB727BD7E61004732CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D02B2FB927BD7E62004732CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02B2FBC27BD7E62004732CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		D02B2FA927BD7E61004732CB = {
 			isa = PBXGroup;
 			children = (
-				D02B2FB427BD7E61004732CB /* CoffeeCommerce */,
+				D02B2FB427BD7E61004732CB /* Dorian */,
 				D02B2FB327BD7E61004732CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,12 +66,12 @@
 		D02B2FB327BD7E61004732CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */,
+				D02B2FB227BD7E61004732CB /* Dorian.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D02B2FB427BD7E61004732CB /* CoffeeCommerce */ = {
+		D02B2FB427BD7E61004732CB /* Dorian */ = {
 			isa = PBXGroup;
 			children = (
 				D02B2FCA27BDB1AF004732CB /* Components */,
@@ -83,7 +83,7 @@
 				D02B2FCF27BDB1E3004732CB /* Workers */,
 				D02B2FBB27BD7E62004732CB /* Preview Content */,
 			);
-			path = CoffeeCommerce;
+			path = Dorian;
 			sourceTree = "<group>";
 		};
 		D02B2FBB27BD7E62004732CB /* Preview Content */ = {
@@ -144,7 +144,7 @@
 		D02B2FCD27BDB1D0004732CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */,
+				D02B2FB527BD7E61004732CB /* DorianApp.swift */,
 				D02B2FC927BD7FC3004732CB /* Info.plist */,
 				D069A31827D9C9B300C5FFCF /* MainView.swift */,
 			);
@@ -168,9 +168,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D02B2FB127BD7E61004732CB /* CoffeeCommerce */ = {
+		D02B2FB127BD7E61004732CB /* Dorian */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D02B2FC027BD7E62004732CB /* Build configuration list for PBXNativeTarget "CoffeeCommerce" */;
+			buildConfigurationList = D02B2FC027BD7E62004732CB /* Build configuration list for PBXNativeTarget "Dorian" */;
 			buildPhases = (
 				D02B2FAE27BD7E61004732CB /* Sources */,
 				D02B2FAF27BD7E61004732CB /* Frameworks */,
@@ -180,12 +180,12 @@
 			);
 			dependencies = (
 			);
-			name = CoffeeCommerce;
+			name = Dorian;
 			packageProductDependencies = (
 				D0E1D97C27D1C10000A11569 /* WaterfallGrid */,
 			);
 			productName = CoffeeCommerce;
-			productReference = D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */;
+			productReference = D02B2FB227BD7E61004732CB /* Dorian.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D02B2FAD27BD7E61004732CB /* Build configuration list for PBXProject "CoffeeCommerce" */;
+			buildConfigurationList = D02B2FAD27BD7E61004732CB /* Build configuration list for PBXProject "Dorian" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,7 +219,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D02B2FB127BD7E61004732CB /* CoffeeCommerce */,
+				D02B2FB127BD7E61004732CB /* Dorian */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +251,7 @@
 				D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */,
 				D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */,
 				D0265B3327DC1ECD004E23F9 /* OriginButton.swift in Sources */,
-				D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */,
+				D02B2FB627BD7E61004732CB /* DorianApp.swift in Sources */,
 				D069A31327D9126400C5FFCF /* LikeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,11 +382,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCommerce/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Dorian/Preview Content\"";
 				DEVELOPMENT_TEAM = 7V49PRU8U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CoffeeCommerce/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Dorian/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -397,7 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danicajiao.CoffeeCommerce;
+				PRODUCT_BUNDLE_IDENTIFIER = danicajiao.Dorian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -412,11 +412,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCommerce/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Dorian/Preview Content\"";
 				DEVELOPMENT_TEAM = 7V49PRU8U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CoffeeCommerce/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Dorian/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -427,7 +427,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danicajiao.CoffeeCommerce;
+				PRODUCT_BUNDLE_IDENTIFIER = danicajiao.Dorian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -438,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D02B2FAD27BD7E61004732CB /* Build configuration list for PBXProject "CoffeeCommerce" */ = {
+		D02B2FAD27BD7E61004732CB /* Build configuration list for PBXProject "Dorian" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D02B2FBE27BD7E62004732CB /* Debug */,
@@ -447,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D02B2FC027BD7E62004732CB /* Build configuration list for PBXNativeTarget "CoffeeCommerce" */ = {
+		D02B2FC027BD7E62004732CB /* Build configuration list for PBXNativeTarget "Dorian" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D02B2FC127BD7E62004732CB /* Debug */,
