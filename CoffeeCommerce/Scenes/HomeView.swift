@@ -33,6 +33,7 @@ struct HomeView: View {
     ]
     
     let categories = ["Fruity", "Choco", "Citrus", "Earthy", "Floral"]
+    let origins = ["Colombia", "Guatemala", "Ethiopia", "Costa Rica", "Kenya"]
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -113,6 +114,28 @@ struct HomeView: View {
                 
                 BannerButton(bannerType: 2)
                     .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                
+                VStack {
+                    HStack {
+                        Text("Origins")
+                            .font(Font.custom("Poppins-SemiBold", size: 20))
+                        Spacer()
+                        // TODO: Navigate to Browse scene
+                        Button("See all \(Image(systemName: "arrow.forward"))") {
+                        }
+                        .foregroundColor(.primaryColor)
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            ForEach(origins, id: \.self) { origin in
+                                OriginButton(origin: origin)
+                            }
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
+                    }
+                }
             }
         }
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2EA27D735FA00E280CE /* CoffeeItem.swift */; };
+		D0265B3327DC1ECD004E23F9 /* OriginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0265B3227DC1ECD004E23F9 /* OriginButton.swift */; };
 		D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */; };
 		D02B2FB827BD7E61004732CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB727BD7E61004732CB /* HomeView.swift */; };
 		D02B2FBA27BD7E62004732CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FB927BD7E62004732CB /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		D011D2EA27D735FA00E280CE /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
+		D0265B3227DC1ECD004E23F9 /* OriginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginButton.swift; sourceTree = "<group>"; };
 		D02B2FB227BD7E61004732CB /* CoffeeCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02B2FB527BD7E61004732CB /* CoffeeCommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCommerceApp.swift; sourceTree = "<group>"; };
 		D02B2FB727BD7E61004732CB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				D069A31227D9126400C5FFCF /* LikeButton.swift */,
 				D069A31427D9391C00C5FFCF /* CategoryButton.swift */,
 				D069A31627D95E2700C5FFCF /* BannerButton.swift */,
+				D0265B3227DC1ECD004E23F9 /* OriginButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				D0D3C27527D5531D00BD4E39 /* CoffeeItemView.swift in Sources */,
 				D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */,
 				D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */,
+				D0265B3327DC1ECD004E23F9 /* OriginButton.swift in Sources */,
 				D02B2FB627BD7E61004732CB /* CoffeeCommerceApp.swift in Sources */,
 				D069A31327D9126400C5FFCF /* LikeButton.swift in Sources */,
 			);
