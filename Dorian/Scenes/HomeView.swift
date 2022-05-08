@@ -7,6 +7,8 @@
 
 import SwiftUI
 import WaterfallGrid
+import Firebase
+import FirebaseStorage
 
 extension Color {
     static let backgroundColor = Color("BackgroundColor")
@@ -25,15 +27,15 @@ extension Color {
 
 struct HomeView: View {
     
-    let coffeeItems = [
-        CoffeeItem(brand: "Wonderstate Coffee", name: "Star Valley Decaf", price: 23.0, imgName: "WST-1011_2"),
-        CoffeeItem(brand: "Brandywine Coffee", name: "Ethiopia Chelbasa Natural", price: 23.0, imgName: "BDWN-1108"),
-        CoffeeItem(brand: "Ritual Coffee", name: "Producer's Pride", price: 23.0, imgName: "RTL-1015_2"),
-        CoffeeItem(brand: "Methodical Coffee", name: "Ethiopia Dur Feres", price: 23.0, imgName: "dur-feres-golden-mug_copy")
-    ]
+    @State var items = [Item]()
     
     let categories = ["Fruity", "Choco", "Citrus", "Earthy", "Floral"]
     let origins = ["Colombia", "Guatemala", "Ethiopia", "Costa Rica", "Kenya"]
+    
+    private var columns: [GridItem] = [
+        GridItem(.adaptive(minimum: 100, maximum: .infinity), spacing: 20),
+        GridItem(.adaptive(minimum: 100, maximum: .infinity), spacing: 20)
+        ]
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -100,15 +102,33 @@ struct HomeView: View {
                     }
                     
                     
-                    WaterfallGrid(coffeeItems) { coffeeItem in
-                        CoffeeItemView(coffeeItem: coffeeItem)
+//                    WaterfallGrid(items) { item in
+//                        ItemView(item: item)
+//                    }
+//                    .gridStyle(
+//                        columnsInPortrait: 2,
+//                        columnsInLandscape: 3,
+////                        spacing: 8,
+//                        animation: nil
+//                    )
+//                    .onAppear {
+//                        getData()
+//                    }
+                    
+                    LazyVGrid(
+                        columns: columns,
+                        alignment: .center,
+                        spacing: 20,
+                        pinnedViews: [.sectionHeaders, .sectionFooters]
+                    ) {
+                        ForEach(items) { item in
+                            ItemCardView(item: item)
+                        }
                     }
-                    .gridStyle(
-                        columnsInPortrait: 2,
-                        columnsInLandscape: 3,
-                        spacing: 8,
-                        animation: nil
-                    )
+                    .onAppear {
+                        getData()
+                    }
+                    
                 }
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
                 
@@ -136,6 +156,38 @@ struct HomeView: View {
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
                     }
                 }
+            }
+        }
+    }
+    
+    func getData() {
+        
+        // Get a reference to the database
+        let db = Firestore.firestore()
+        
+        // Read the documents at a specific path
+        db.collection("items").limit(to: 4).getDocuments { snapshot, error in
+            if error == nil {
+                // No errors
+                if let snapshot = snapshot {
+                    // Update the item property in the main thread
+                    DispatchQueue.main.async {
+                        // Get all the documents and create items
+                        self.items = snapshot.documents.map { d in
+                            // Create an Item for each document returned
+                            let item = Item(id: d.documentID,
+                                            brand: d["brand"] as? String ?? "",
+                                            name: d["name"] as? String ?? "",
+                                            price: d["price"] as? Float ?? 0,
+                                            imgPath: d["imgPath"] as? String ?? "")
+                            item.printItem()
+                            return item
+                        }
+                    }
+                }
+            }
+            else {
+                // Handle the error
             }
         }
     }

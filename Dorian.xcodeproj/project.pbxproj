@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2EA27D735FA00E280CE /* CoffeeItem.swift */; };
+		D011D2EB27D735FA00E280CE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011D2EA27D735FA00E280CE /* Item.swift */; };
+		D013E6762822EDD6009BCBC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D013E6752822EDD6009BCBC2 /* GoogleService-Info.plist */; };
 		D0265B3327DC1ECD004E23F9 /* OriginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0265B3227DC1ECD004E23F9 /* OriginButton.swift */; };
 		D02B2FB627BD7E61004732CB /* DorianApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB527BD7E61004732CB /* DorianApp.swift */; };
 		D02B2FB827BD7E61004732CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B2FB727BD7E61004732CB /* HomeView.swift */; };
@@ -15,17 +16,24 @@
 		D02B2FBD27BD7E62004732CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FBC27BD7E62004732CB /* Preview Assets.xcassets */; };
 		D02B2FC727BD7F64004732CB /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FC527BD7F64004732CB /* Poppins-Regular.ttf */; };
 		D02B2FC827BD7F64004732CB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D02B2FC627BD7F64004732CB /* Poppins-SemiBold.ttf */; };
+		D04D2EC228277B7D001ED21A /* TabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04D2EC128277B7D001ED21A /* TabState.swift */; };
 		D069A31327D9126400C5FFCF /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069A31227D9126400C5FFCF /* LikeButton.swift */; };
 		D069A31527D9391C00C5FFCF /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069A31427D9391C00C5FFCF /* CategoryButton.swift */; };
 		D069A31727D95E2700C5FFCF /* BannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069A31627D95E2700C5FFCF /* BannerButton.swift */; };
 		D069A31927D9C9B300C5FFCF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069A31827D9C9B300C5FFCF /* MainView.swift */; };
-		D0D3C27527D5531D00BD4E39 /* CoffeeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */; };
+		D06B593428284D5500B26053 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B593328284D5500B26053 /* ItemView.swift */; };
+		D0AA4943282304D300954DFE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D0AA4942282304D300954DFE /* FirebaseAuth */; };
+		D0AA4945282304D300954DFE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D0AA4944282304D300954DFE /* FirebaseFirestore */; };
+		D0AA4947282304D300954DFE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D0AA4946282304D300954DFE /* FirebaseStorage */; };
+		D0AA49492823BE0400954DFE /* Waterfall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AA49482823BE0400954DFE /* Waterfall.swift */; };
+		D0D3C27527D5531D00BD4E39 /* ItemCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3C27427D5531D00BD4E39 /* ItemCardView.swift */; };
 		D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */; };
 		D0E1D97D27D1C10000A11569 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = D0E1D97C27D1C10000A11569 /* WaterfallGrid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D011D2EA27D735FA00E280CE /* CoffeeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItem.swift; sourceTree = "<group>"; };
+		D011D2EA27D735FA00E280CE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D013E6752822EDD6009BCBC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0265B3227DC1ECD004E23F9 /* OriginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginButton.swift; sourceTree = "<group>"; };
 		D02B2FB227BD7E61004732CB /* Dorian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dorian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02B2FB527BD7E61004732CB /* DorianApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DorianApp.swift; sourceTree = "<group>"; };
@@ -35,11 +43,14 @@
 		D02B2FC527BD7F64004732CB /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D02B2FC627BD7F64004732CB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../Downloads/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D02B2FC927BD7FC3004732CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D04D2EC128277B7D001ED21A /* TabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabState.swift; sourceTree = "<group>"; };
 		D069A31227D9126400C5FFCF /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		D069A31427D9391C00C5FFCF /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		D069A31627D95E2700C5FFCF /* BannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerButton.swift; sourceTree = "<group>"; };
 		D069A31827D9C9B300C5FFCF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeItemView.swift; sourceTree = "<group>"; };
+		D06B593328284D5500B26053 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		D0AA49482823BE0400954DFE /* Waterfall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waterfall.swift; sourceTree = "<group>"; };
+		D0D3C27427D5531D00BD4E39 /* ItemCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCardView.swift; sourceTree = "<group>"; };
 		D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +60,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E1D97D27D1C10000A11569 /* WaterfallGrid in Frameworks */,
+				D0AA4947282304D300954DFE /* FirebaseStorage in Frameworks */,
+				D0AA4943282304D300954DFE /* FirebaseAuth in Frameworks */,
+				D0AA4945282304D300954DFE /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,11 +130,13 @@
 			isa = PBXGroup;
 			children = (
 				D0E1D97927D1BEFE00A11569 /* CustomUIView.swift */,
-				D0D3C27427D5531D00BD4E39 /* CoffeeItemView.swift */,
+				D0D3C27427D5531D00BD4E39 /* ItemCardView.swift */,
 				D069A31227D9126400C5FFCF /* LikeButton.swift */,
 				D069A31427D9391C00C5FFCF /* CategoryButton.swift */,
 				D069A31627D95E2700C5FFCF /* BannerButton.swift */,
 				D0265B3227DC1ECD004E23F9 /* OriginButton.swift */,
+				D0AA49482823BE0400954DFE /* Waterfall.swift */,
+				D06B593328284D5500B26053 /* ItemView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -128,7 +144,8 @@
 		D02B2FCB27BDB1C3004732CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D011D2EA27D735FA00E280CE /* CoffeeItem.swift */,
+				D011D2EA27D735FA00E280CE /* Item.swift */,
+				D04D2EC128277B7D001ED21A /* TabState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +161,7 @@
 		D02B2FCD27BDB1D0004732CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D013E6752822EDD6009BCBC2 /* GoogleService-Info.plist */,
 				D02B2FB527BD7E61004732CB /* DorianApp.swift */,
 				D02B2FC927BD7FC3004732CB /* Info.plist */,
 				D069A31827D9C9B300C5FFCF /* MainView.swift */,
@@ -183,6 +201,9 @@
 			name = Dorian;
 			packageProductDependencies = (
 				D0E1D97C27D1C10000A11569 /* WaterfallGrid */,
+				D0AA4942282304D300954DFE /* FirebaseAuth */,
+				D0AA4944282304D300954DFE /* FirebaseFirestore */,
+				D0AA4946282304D300954DFE /* FirebaseStorage */,
 			);
 			productName = CoffeeCommerce;
 			productReference = D02B2FB227BD7E61004732CB /* Dorian.app */;
@@ -214,6 +235,7 @@
 			mainGroup = D02B2FA927BD7E61004732CB;
 			packageReferences = (
 				D0E1D97B27D1C10000A11569 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
+				D0AA4941282304D300954DFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D02B2FB327BD7E61004732CB /* Products */;
 			projectDirPath = "";
@@ -231,6 +253,7 @@
 			files = (
 				D02B2FC727BD7F64004732CB /* Poppins-Regular.ttf in Resources */,
 				D02B2FC827BD7F64004732CB /* Poppins-SemiBold.ttf in Resources */,
+				D013E6762822EDD6009BCBC2 /* GoogleService-Info.plist in Resources */,
 				D02B2FBD27BD7E62004732CB /* Preview Assets.xcassets in Resources */,
 				D02B2FBA27BD7E62004732CB /* Assets.xcassets in Resources */,
 			);
@@ -247,9 +270,12 @@
 				D069A31927D9C9B300C5FFCF /* MainView.swift in Sources */,
 				D069A31727D95E2700C5FFCF /* BannerButton.swift in Sources */,
 				D02B2FB827BD7E61004732CB /* HomeView.swift in Sources */,
-				D0D3C27527D5531D00BD4E39 /* CoffeeItemView.swift in Sources */,
+				D0D3C27527D5531D00BD4E39 /* ItemCardView.swift in Sources */,
+				D04D2EC228277B7D001ED21A /* TabState.swift in Sources */,
 				D0E1D97A27D1BEFE00A11569 /* CustomUIView.swift in Sources */,
-				D011D2EB27D735FA00E280CE /* CoffeeItem.swift in Sources */,
+				D0AA49492823BE0400954DFE /* Waterfall.swift in Sources */,
+				D011D2EB27D735FA00E280CE /* Item.swift in Sources */,
+				D06B593428284D5500B26053 /* ItemView.swift in Sources */,
 				D0265B3327DC1ECD004E23F9 /* OriginButton.swift in Sources */,
 				D02B2FB627BD7E61004732CB /* DorianApp.swift in Sources */,
 				D069A31327D9126400C5FFCF /* LikeButton.swift in Sources */,
@@ -397,7 +423,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danicajiao.Dorian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danicajiao.Dorian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -427,7 +453,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danicajiao.Dorian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danicajiao.Dorian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -459,6 +485,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D0AA4941282304D300954DFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		D0E1D97B27D1C10000A11569 /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid";
@@ -470,6 +504,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D0AA4942282304D300954DFE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0AA4941282304D300954DFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D0AA4944282304D300954DFE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0AA4941282304D300954DFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		D0AA4946282304D300954DFE /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0AA4941282304D300954DFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		D0E1D97C27D1C10000A11569 /* WaterfallGrid */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D0E1D97B27D1C10000A11569 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;

@@ -9,10 +9,12 @@ import SwiftUI
 
 struct LikeButton : View {
     @Binding var enabled: Bool
+    @State private var pressed = false
+    @State private var scale = 1.0
     
-    func simpleSuccess() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+    func haptic() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
     
     var body: some View {
@@ -23,10 +25,22 @@ struct LikeButton : View {
             Image(systemName: enabled ? "heart.fill" : "heart")
                 .foregroundColor(enabled ? .pink : .black)
         }
-        .onTapGesture {
-            self.enabled.toggle()
-            simpleSuccess()
-        }
+        .scaleEffect(scale)
+        .onLongPressGesture(minimumDuration: 2.5, maximumDistance: .infinity, pressing: { pressing in
+            self.pressed = pressing
+            if pressing {
+                haptic()
+                withAnimation(.linear(duration: 0.1)) {
+                    self.scale = 1.5
+                }
+            } else {
+                haptic()
+                withAnimation(.easeOut(duration: 0.3)) {
+                    self.scale = 1.0
+                }
+                self.enabled.toggle()
+            }
+        }, perform: { })
     }
 }
 

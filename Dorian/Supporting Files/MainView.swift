@@ -8,61 +8,63 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var selectedTab = "home"
+    @StateObject private var tabState = TabState()
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            
+        TabView(selection: $tabState.currentTab) {
             HomeView()
                 .onTapGesture {
-                    selectedTab = "home"
+                    tabState.currentTab = "home"
                 }
                 .tabItem {
-                    Label("Home", systemImage: selectedTab == "home" ? "house.fill" : "house")
+                    Label("Home", systemImage: tabState.currentTab == "home" ? "house.fill" : "house")
                         .environment(\.symbolVariants, .none)
                 }
                 .tag("home")
             
             Text("Browse Scene")
                 .onTapGesture {
-                    selectedTab = "browse"
+                    tabState.currentTab = "browse"
                 }
                 .tabItem {
-                    Label("Browse", systemImage: selectedTab == "browse" ? "magnifyingglass" : "magnifyingglass")
+                    Label("Browse", systemImage: tabState.currentTab == "browse" ? "magnifyingglass" : "magnifyingglass")
                         .environment(\.symbolVariants, .none)
                 }
                 .tag("browse")
             
             Text("Bag Scene")
                 .onTapGesture {
-                    selectedTab = "bag"
+                    tabState.currentTab = "bag"
                 }
                 .tabItem {
-                    Label("Bag", systemImage: selectedTab == "bag" ? "bag.fill" : "bag")
+                    Label("Bag", systemImage: tabState.currentTab == "bag" ? "bag.fill" : "bag")
                         .environment(\.symbolVariants, .none)
                 }
                 .tag("bag")
             
             Text("Favorites Scene")
                 .onTapGesture {
-                    selectedTab = "favorites"
+                    tabState.currentTab = "favorites"
                 }
                 .tabItem {
-                    Label("Favorites", systemImage: selectedTab == "favorites" ? "heart.fill" : "heart")
+                    Label("Favorites", systemImage: tabState.currentTab == "favorites" ? "heart.fill" : "heart")
                         .environment(\.symbolVariants, .none)
                 }
                 .tag("favorites")
             
             Text("Profile Scene")
                 .onTapGesture {
-                    selectedTab = "profile"
+                    tabState.currentTab = "profile"
                 }
                 .tabItem {
-                    Label("Profile", systemImage: selectedTab == "profile" ? "person.crop.circle.fill" : "person.crop.circle")
+                    Label("Profile", systemImage: tabState.currentTab == "profile" ? "person.crop.circle.fill" : "person.crop.circle")
                         .environment(\.symbolVariants, .none)
                 }
                 .tag("profile")
+            
+            
         }
+        .environmentObject(tabState)
     }
 }
 
